@@ -1,4 +1,4 @@
-package com.beriani.Library;
+package com.beriani.library;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,13 +1,13 @@
-package com.beriani.Library;
+package com.beriani.library.model;
 
-public class User {
+public class UserLogin {
 
     private String username;
     private String password;
 
-    public User(){};
+    public UserLogin(){};
 
-    public User(String username, String password) {
+    public UserLogin(String username, String password) {
         this.username = username;
         this.password = password;
     }

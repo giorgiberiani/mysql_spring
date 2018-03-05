@@ -914,13 +914,13 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="230" parent="2" name="Author">
+    <table id="230" parent="2" name="author">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="231" parent="2" name="Book">
+    <table id="231" parent="2" name="book">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="232" parent="2" name="User">
+    <table id="232" parent="2" name="user">
       <Engine>InnoDB</Engine>
     </table>
     <view id="233" parent="3" name="CHARACTER_SETS">
@@ -1130,7 +1130,7 @@
     </column>
     <column id="298" parent="230" name="birthDate">
       <Position>5</Position>
-      <DataType>int(4)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="299" parent="230" name="PRIMARY">
@@ -1157,7 +1157,7 @@
     </column>
     <column id="303" parent="231" name="year">
       <Position>4</Position>
-      <DataType>int(4)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="304" parent="231" name="isbn">
