@@ -1,27 +1,22 @@
 package com.beriani.library.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "book")
-public class BookCatalogue {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private int bookID;
 
     private String author;
     private String name;
     private int year;
     private int isbn;
 
-    public BookCatalogue(){}
+    public Book(){}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     public void setAuthor(String author) {
         this.author = author;
@@ -39,9 +34,7 @@ public class BookCatalogue {
         this.isbn = isbn;
     }
 
-    public int getId() {
-        return id;
-    }
+
 
     public String getAuthor() {
         return author;

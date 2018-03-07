@@ -9,6 +9,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class HomeComponent implements OnInit {
 
   books: book[] =  [];
+  favoriteBooks: book[] = [];
   headers = new HttpHeaders(
     {'Content-Type':'application/json; charset=utf-8'});
 
@@ -18,11 +19,27 @@ export class HomeComponent implements OnInit {
       .subscribe(
         data=> {
           this.books = data;
+          console.log(this.books);
         }
       )
   }
 
   ngOnInit() {
+
+  }
+
+
+  addFavorite(book: book){
+    this.http.post("api/addfavorite",book,{headers: this.headers})
+      .subscribe(
+        data =>{
+          this.favoriteBooks.push(book);
+          console.log(this.favoriteBooks);
+        }
+      )
+  }
+
+  isfavorite(){
 
   }
 

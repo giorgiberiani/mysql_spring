@@ -7,16 +7,16 @@ export class book{
   private _isbn: string;
 
 
-  constructor(id: any, name: string, author: string, year: string, isbn: string) {
-    this._id = id;
-    this._name = name;
+  constructor(bookID: any, author: string,name: string, year: string, isbn: string) {
+    this._id = bookID;
     this._author = author;
+    this._name = name;
     this._year = year;
     this._isbn = isbn;
   }
 
 
-  set id(value: any) {
+  set bookID(value: any) {
     this._id = value;
   }
 
@@ -36,7 +36,7 @@ export class book{
     this._isbn = value;
   }
 
-  get id(): any {
+  get bookID(): any {
     return this._id;
   }
 

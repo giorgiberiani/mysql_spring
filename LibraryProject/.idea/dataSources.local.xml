@@ -9,7 +9,12 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:Fontana,information_schema</introspection-schemas>
+      <introspection-schemas>*:information_schema,library</introspection-schemas>
+    </data-source>
+    <data-source name="postgres@localhost" uuid="2f323e0b-59d4-493c-b707-cbe2b175641c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
     </data-source>
   </component>
 </project>
