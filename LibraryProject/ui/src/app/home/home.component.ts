@@ -25,11 +25,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.http.get<any>('api/getfavorite',{headers: this.headers }).
+      subscribe(
+        data=> {
+          this.favoriteBooks = data;
+        }
+    )
 
   }
 
 
   addFavorite(book: book){
+    if(this.favoriteBooks.includes(book)){
+      return;
+    }
     this.http.post("api/addfavorite",book,{headers: this.headers})
       .subscribe(
         data =>{
@@ -39,8 +48,5 @@ export class HomeComponent implements OnInit {
       )
   }
 
-  isfavorite(){
-
-  }
 
 }

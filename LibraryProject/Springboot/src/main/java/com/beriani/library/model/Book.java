@@ -1,6 +1,7 @@
 package com.beriani.library.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "book")
 public class Book {
@@ -14,9 +15,14 @@ public class Book {
     private int year;
     private int isbn;
 
+    @ManyToMany(mappedBy = "books")
+    private List<User> users;
+
     public Book(){}
 
-
+    public int getBookID() {
+        return bookID;
+    }
 
     public void setAuthor(String author) {
         this.author = author;

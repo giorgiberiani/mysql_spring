@@ -5,6 +5,7 @@ import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -19,20 +20,20 @@ public class User {
     private String username;
     private String password;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
             name = "user_book",
             joinColumns = @JoinColumn(name = "userID"),
             inverseJoinColumns = @JoinColumn(name = "bookID")
     )
-    private List<Book> book;
+    private Set<Book> books;
 
-    public List<Book> getBook(){
-        return book;
+    public Set<Book> getBooks(){
+        return books;
     }
 
-    public void setBooks(List<Book> book){
-        this.book = book;
+    public void setBooks(Set<Book> books){
+        this.books = books;
     }
 
 
@@ -40,6 +41,10 @@ public class User {
     public User() {
     }
 
+
+    public Integer getUserID() {
+        return userID;
+    }
 
     public void setName(String name) {
         this.name = name;

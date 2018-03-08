@@ -1,7 +1,6 @@
 <app-header></app-header>
-
 <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-  <div class="panel-heading"><h1>BOOKS</h1></div>
+  <div class="panel-heading"><h1>Favorite books</h1></div>
   <div class="panel-body" *ngFor="let book of books" >
     <ul class="list-group">
       <div class="row">
@@ -9,7 +8,7 @@
         <div class="col-md-2">{{book.name}}</div>
         <div class="col-md-2">{{book.year}}</div>
         <div class="col-md-2">{{book.isbn}}</div>
-        <button  class="btn btn-success" (click)="addFavorite(book)">ADD</button>
+        <button  class="btn btn-success" (click)="delteFavoriteBook(book)">Delete</button>
       </div>
     </ul>
   </div>

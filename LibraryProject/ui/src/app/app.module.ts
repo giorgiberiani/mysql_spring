@@ -9,10 +9,12 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import {HeaderComponent} from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import {FavoriteComponent} from "./favorit/favorite.component";
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'favorite', component: FavoriteComponent }
 ];
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    FavoriteComponent
   ],
   imports: [
     HttpClientModule,
